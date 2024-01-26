@@ -12,7 +12,7 @@ Sets of components and helpers for vyke apps made with astro
 
 ```astro
 ---
-import Footer from "../../../footer.astro";
+import { Footer } from "@vyke/astro";
 ---
 
 <Footer
@@ -34,7 +34,7 @@ import Footer from "../../../footer.astro";
 
 ```astro
 ---
-import IconLinks from "../../../icon-links.astro";
+import { IconLinks } from "@vyke/astro";
 ---
 
 <IconLinks />
@@ -44,7 +44,7 @@ import IconLinks from "../../../icon-links.astro";
 
 ```astro
 ---
-import Page404 from "../../../404.astro";
+import { Page404 } from "@vyke/astro";
 ---
 
 <Page404 />
