@@ -1,0 +1,25 @@
+---
+import FooterLink from "./footer-link.astro";
+
+export type Link = {
+  href: string;
+  label: string;
+};
+export type Props = {
+  label: string;
+  links: Array<Link>;
+};
+
+const { label, links } = Astro.props;
+---
+
+{
+  links.length !== 0 && (
+    <nav class="gap-0">
+      <header class="footer-title">{label}</header>
+      {links.map((link) => {
+        return <FooterLink {...link} />;
+      })}
+    </nav>
+  )
+}

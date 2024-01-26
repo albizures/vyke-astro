@@ -1,0 +1,31 @@
+---
+import Footer from "../../../footer.astro";
+import Page404 from "../../../404.astro";
+import IconLinks from "../../../icon-links.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <IconLinks />
+    <title>Vyke playground</title>
+  </head>
+  <body>
+    <Page404 />
+    <Footer
+      openSourceLinks={[
+        {
+          href: "https://github.com/albizures/vyke-results",
+          label: "@vyke/results",
+        },
+      ]}
+      projectLinks={[{ href: "https://clock.vyke.dev", label: "Online Clock" }]}
+      otherLinks={[{ href: "/legal", label: "legal" }]}
+    >
+      <span slot="github-icon">|github|</span>
+      <span slot="twitter-icon">|twitter|</span>
+    </Footer>
+  </body>
+</html>
