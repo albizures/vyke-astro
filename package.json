@@ -11,15 +11,14 @@
 		"components",
 		"astro"
 	],
-	"main": "index.js",
+	"exports": {
+		".": "./src/index.ts"
+	},
 	"files": [
-		"*.astro",
-		"./assets/*.png",
-		"./assets/favicon.ico"
+		"src/*"
 	],
 	"scripts": {
 		"dev": "astro dev --root playground",
-		"build": "astro check --root playground && astro build --root playground",
 		"preview": "astro preview --root playground",
 		"astro": "astro --root playground",
 		"release:bump": "standard-version -t v",
