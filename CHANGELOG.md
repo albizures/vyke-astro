@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/albizures/vyke-astro/compare/v0.0.3...v0.0.4) (2024-01-29)
+
+
+### Features
+
+* improve footer ([1b8094f](https://github.com/albizures/vyke-astro/commit/1b8094f72361e63ac62370f395421f4192c023c4))
+
 ### [0.0.3](https://github.com/albizures/vyke-astro/compare/v0.0.2...v0.0.3) (2024-01-26)
 
 
