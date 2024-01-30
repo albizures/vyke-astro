@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/albizures/vyke-astro/compare/v0.0.4...v0.0.5) (2024-01-30)
+
+
+### Features
+
+* add header, section and theme controller components ([398a294](https://github.com/albizures/vyke-astro/commit/398a2947383b3a2d49f17da329b3000119597291))
+
 ### [0.0.4](https://github.com/albizures/vyke-astro/compare/v0.0.3...v0.0.4) (2024-01-29)
 
 
