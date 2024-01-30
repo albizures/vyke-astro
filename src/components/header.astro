@@ -1,0 +1,31 @@
+---
+export type Props = {
+  title?: string;
+};
+
+import Section from "./section.astro";
+
+const { title } = Astro.props;
+---
+
+<Section as="header" class="flex items-center justify-between my-4">
+  <div class="flex-1">
+    <slot name="left">
+      <a href="/" class="btn border-0 text-2xl text-0">
+        {
+          title ? (
+            <span class="text-primary">
+              vyke/<span class="text-base-content">{title}</span>
+            </span>
+          ) : (
+            <span>vyke</span>
+          )
+        }
+      </a>
+    </slot>
+  </div>
+  <div><slot name="center" /></div>
+  <div class="flex-1 flex justify-end">
+    <slot name="right" />
+  </div>
+</Section>

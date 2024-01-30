@@ -1,5 +1,11 @@
 ---
-import { Footer, Page404, IconLinks } from "../../../src";
+import {
+  Footer,
+  Page404,
+  IconLinks,
+  Header,
+  ThemeController,
+} from "../../../src";
 ---
 
 <html lang="en">
@@ -11,6 +17,12 @@ import { Footer, Page404, IconLinks } from "../../../src";
     <title>Vyke playground</title>
   </head>
   <body>
+    <Header title="playground">
+      <ThemeController
+        slot="right"
+        themes={["light", "cupcake", "pastel", "dark"]}
+      />
+    </Header>
     <Page404 />
     <Footer
       openSourceLinks={[

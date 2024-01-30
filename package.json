@@ -26,9 +26,15 @@
 		"release:push-tags": "git push --follow-tags origin main",
 		"release": "run-s release:bump release:publish release:push-tags"
 	},
+	"peerDependencies": {
+		"@vyke/dom": "^0.0.4",
+		"@vyke/results": "^0.1.0"
+	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^2.6.3",
 		"@astrojs/tailwind": "^5.1.0",
+		"@vyke/dom": "^0.0.4",
+		"@vyke/results": "^0.1.0",
 		"astro": "^4.2.4",
 		"daisyui": "^4.6.0",
 		"eslint": "^8.56.0",
