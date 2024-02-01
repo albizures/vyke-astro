@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^5.1.0
     version: 5.1.0(astro@4.2.4)(tailwindcss@3.4.1)
   '@vyke/dom':
-    specifier: ^0.0.4
-    version: 0.0.4(@vyke/results@0.1.0)
+    specifier: ^0.0.5
+    version: 0.0.5(@vyke/results@0.1.0)
   '@vyke/results':
     specifier: ^0.1.0
     version: 0.1.0
@@ -1238,8 +1238,8 @@ packages:
     resolution: {integrity: sha512-KzfPTxVaWfB+eGcGdbSf4CWdaXcGDqckoeXUh7SB3fZdEtzPCK2Vq9B/lRRL3yutax/LWITz+SwvgyOxz5V75g==}
     dev: true
 
-  /@vyke/dom@0.0.4(@vyke/results@0.1.0):
-    resolution: {integrity: sha512-lpqAjaQITN8Uh1wElTSBak7GlkO9DqsGloCreXS3ilnmNNxQG+QQILandAlMJdF6VA9SdZweqFue0bktiREc3g==}
+  /@vyke/dom@0.0.5(@vyke/results@0.1.0):
+    resolution: {integrity: sha512-XHT8xHEgsdXYMrN3lfIM8ErB7SdisBMTc4R1xokKR4kxIz8nkd3CL1tlzQb88Yfz7NecMFYUIZmyjkYF3wjvEw==}
     peerDependencies:
       '@vyke/results': ^0.1.*
     dependencies:
