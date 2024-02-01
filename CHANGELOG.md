@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/albizures/vyke-astro/compare/v0.0.5...v0.0.6) (2024-02-01)
+
+
+### Bug Fixes
+
+* peer dependnecies ([da8bf5b](https://github.com/albizures/vyke-astro/commit/da8bf5b10fb3be5e238b77e419c6a3226bbff8c3))
+
 ### [0.0.5](https://github.com/albizures/vyke-astro/compare/v0.0.4...v0.0.5) (2024-01-30)
 
 
