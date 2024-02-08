@@ -1,0 +1,14 @@
+<script is:inline>
+  const customTheme = localStorage.getItem("v:theme");
+  const root = document.documentElement;
+
+  if (customTheme === null) {
+    const preferDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    root.dataset.theme = preferDark ? "dark" : "cupcake";
+  } else {
+    root.dataset.theme = customTheme;
+  }
+</script>
