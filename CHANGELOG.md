@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/albizures/vyke-astro/compare/v0.0.6...v0.0.7) (2024-02-08)
+
+
+### Features
+
+* create theme and theme toggle to handle themes ([36c2b0a](https://github.com/albizures/vyke-astro/commit/36c2b0af6e0ad6f52f3ab69b742fefd1fcf4042a))
+
 ### [0.0.6](https://github.com/albizures/vyke-astro/compare/v0.0.5...v0.0.6) (2024-02-01)
 
 
