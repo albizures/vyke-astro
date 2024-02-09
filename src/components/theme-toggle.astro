@@ -1,8 +1,12 @@
 <label class="swap swap-rotate">
   <input type="checkbox" data-theme-toggle value="dark" />
 
-  <slot name="light" />
-  <slot name="dark" />
+  <div class="swap-on">
+    <slot name="light" />
+  </div>
+  <div class="swap-off">
+    <slot name="dark" />
+  </div>
 </label>
 <script>
   import { select, query, on } from "@vyke/dom";
