@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/albizures/vyke-astro/compare/v0.0.7...v0.0.8) (2024-02-09)
+
+
+### Bug Fixes
+
+* add swap off and on class on the component level ([b9b7ea7](https://github.com/albizures/vyke-astro/commit/b9b7ea77a58f7aaba0bed6f407e01ebbbdd6cc49))
+
 ### [0.0.7](https://github.com/albizures/vyke-astro/compare/v0.0.6...v0.0.7) (2024-02-08)
 
 
