@@ -16,12 +16,12 @@
     select(query<HTMLInputElement>("[data-theme-toggle]"))
   );
 
-  const a = window.matchMedia("(prefers-color-scheme: dark)");
-
   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   let changeOff: () => void;
   if (localStorage.getItem("v:theme") === null) {
+    checkbox.checked = mediaQuery.matches;
+
     changeOff = on(mediaQuery, "change", (event) => {
       document.documentElement.dataset.theme = getTheme(event.matches);
     });
