@@ -31,8 +31,8 @@
 		"release": "run-s release:bump release:publish release:push-tags"
 	},
 	"peerDependencies": {
-		"@vyke/dom": "^0.0.*",
-		"@vyke/results": "^0.1.0"
+		"@vyke/dom": "^0.1.*",
+		"@vyke/results": "^0.4.*"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^2.22.0",
