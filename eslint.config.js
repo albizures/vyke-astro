@@ -1,12 +1,28 @@
+// @ts-check
 import antfu from '@antfu/eslint-config'
 
 export default antfu(
 	{
 		typescript: true,
+		astro: true,
 		stylistic: {
 			indent: 'tab',
 		},
 		ignores: ['**/.tshy/**/*'],
+	},
+	{
+		files: ['*.ts', '*.tsx'],
+		rules: {
+			// for some reason this rules is not working
+			// when listed as general rule.
+			'ts/consistent-type-imports': [
+				'error',
+				{
+					prefer: 'type-imports',
+					fixStyle: 'inline-type-imports',
+				},
+			],
+		},
 	},
 	{
 		rules: {
@@ -17,13 +33,6 @@ export default antfu(
 			'ts/consistent-type-definitions': ['error', 'type'],
 			'ts/indent': 'off',
 			'ts/no-redeclare': 'off',
-			'ts/consistent-type-imports': [
-				'error',
-				{
-					prefer: 'type-imports',
-					fixStyle: 'inline-type-imports',
-				},
-			],
 			'arrow-parens': ['error', 'always'],
 			'style/arrow-parens': ['error', 'always'],
 			'curly': ['error', 'all'],

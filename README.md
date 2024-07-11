@@ -12,18 +12,18 @@ Sets of components and helpers for vyke apps made with astro
 
 ```astro
 ---
-import { Footer } from "@vyke/astro";
+import { Footer } from '@vyke/astro';
 ---
 
 <Footer
 	openSourceLinks={[
 		{
-			href: "https://github.com/albizures/vyke-results",
-			label: "@vyke/results",
+			href: 'https://github.com/albizures/vyke-results',
+			label: '@vyke/results',
 		},
 	]}
-	projectLinks={[{ href: "https://clock.vyke.dev", label: "Online Clock" }]}
-	otherLinks={[{ href: "/legal", label: "legal" }]}
+	projectLinks={[{ href: 'https://clock.vyke.dev', label: 'Online Clock' }]}
+	otherLinks={[{ href: '/legal', label: 'legal' }]}
 >
 	<span slot="github-icon">|github|</span>
 	<span slot="twitter-icon">|twitter|</span>
@@ -34,7 +34,7 @@ import { Footer } from "@vyke/astro";
 
 ```astro
 ---
-import { IconLinks } from "@vyke/astro";
+import { IconLinks } from '@vyke/astro';
 ---
 
 <IconLinks />
@@ -44,7 +44,7 @@ import { IconLinks } from "@vyke/astro";
 
 ```astro
 ---
-import { Page404 } from "@vyke/astro";
+import { Page404 } from '@vyke/astro';
 ---
 
 <Page404 />

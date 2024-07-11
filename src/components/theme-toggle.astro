@@ -1,41 +1,43 @@
 <label class="swap swap-rotate btn btn-circle">
-  <input type="checkbox" data-theme-toggle value="dark" />
+	<input type="checkbox" data-theme-toggle value="dark" />
 
-  <div class="swap-on">
-    <slot name="light" />
-  </div>
-  <div class="swap-off">
-    <slot name="dark" />
-  </div>
+	<div class="swap-on">
+		<slot name="light" />
+	</div>
+	<div class="swap-off">
+		<slot name="dark" />
+	</div>
 </label>
 <script>
-  import { select, query, on } from "@vyke/dom";
-  import { unwrap } from "@vyke/results";
+import { on, query, select } from '@vyke/dom'
+import { unwrap } from '@vyke/results/result'
 
-  const [checkbox] = unwrap(
-    select(query<HTMLInputElement>("[data-theme-toggle]"))
-  );
+const [checkbox] = unwrap(
+	select(query < HTMLInputElement > ('[data-theme-toggle]')),
+)
 
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
-  let changeOff: () => void;
-  if (localStorage.getItem("v:theme") === null) {
-    checkbox.checked = mediaQuery.matches;
+let changeOff: () => void
+if (localStorage.getItem('v:theme') === null) {
+	checkbox.checked = mediaQuery.matches
 
-    changeOff = on(mediaQuery, "change", (event) => {
-      document.documentElement.dataset.theme = getTheme(event.matches);
-    });
-  }
+	changeOff = on(mediaQuery, 'change', (event) => {
+		document.documentElement.dataset.theme = getTheme(event.matches)
+	})
+}
 
-  function getTheme(isDark: boolean) {
-    return isDark ? "dark" : "cupcake";
-  }
+function getTheme(isDark: boolean) {
+	return isDark ? 'dark' : 'cupcake'
+}
 
-  on(checkbox, "change", () => {
-    changeOff && changeOff();
-    const theme = getTheme(checkbox.checked);
+on(checkbox, 'change', () => {
+	if (changeOff) {
+		changeOff()
+	}
+	const theme = getTheme(checkbox.checked)
 
-    document.documentElement.dataset.theme = theme;
-    localStorage.setItem("v:theme", theme);
-  });
+	document.documentElement.dataset.theme = theme
+	localStorage.setItem('v:theme', theme)
+})
 </script>

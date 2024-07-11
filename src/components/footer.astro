@@ -1,62 +1,48 @@
 ---
-import FooterLinkSection from "./footer-link-section.astro";
-import Section from "./section.astro";
-
-export type Link = {
-  href: string;
-  label: string;
-};
+import { type Link } from '../link'
+import FooterLinkSection from './footer-link-section.astro'
+import Section from './section.astro'
 
 export type Props = {
-  openSourceLinks?: Array<Link>;
-  projectLinks?: Array<Link>;
-  otherLinks?: Array<Link>;
-};
-
-const {
-  openSourceLinks = [],
-  projectLinks = [],
-  otherLinks = [],
-} = Astro.props;
-
-const withLinks =
-  openSourceLinks.length !== 0 ||
-  projectLinks.length !== 0 ||
-  otherLinks.length !== 0;
----
-
-{
-  withLinks && (
-    <Section
-      as="footer"
-      class="footer"
-      sectionClass="mt-16 py-10 bg-base-200 text-base-content border-t border-t-base-300"
-    >
-      <FooterLinkSection label="Open source" links={openSourceLinks} />
-      <FooterLinkSection label="Other projects" links={projectLinks} />
-      <FooterLinkSection label="Other links" links={otherLinks} />
-    </Section>
-  )
+	openSourceLinks?: Array<Link>
+	projectLinks?: Array<Link>
+	otherLinks?: Array<Link>
 }
 
-<Section
-  as="footer"
-  sectionClass="py-4 bg-base-200 text-base-content border-t border-t-base-300"
-  class="footer"
->
-  <aside class="items-center grid-flow-col">
-    <p>A vyke project, <br />by Jose Albizures</p>
-  </aside>
-  <nav class="md:place-self-center md:justify-self-end">
-    <div class="grid grid-flow-col gap-4">
-      <a href="https://twitter.com/albzrs">
-        <span class="sr-only">twitter link</span>
-        <slot name="twitter-icon">twitter</slot>
-      </a>
-      <a href="https://github.com/albizures">
-        <span class="sr-only">github link</span>
-        <slot name="github-icon">github</slot>
-      </a>
-    </div>
-  </nav>
+const {
+	openSourceLinks = [],
+	projectLinks = [],
+	otherLinks = [],
+} = Astro.props
+
+const withLinks
+  = openSourceLinks.length !== 0
+  || projectLinks.length !== 0
+  || otherLinks.length !== 0;
+---
+
+{withLinks && (
+	<Section as="footer" class="footer" sectionClass="mt-16 py-10 bg-base-200 text-base-content border-t border-t-base-300">
+		<FooterLinkSection label="Open source" links={openSourceLinks} />
+		<FooterLinkSection label="Other projects" links={projectLinks} />
+		<FooterLinkSection label="Other links" links={otherLinks} />
+	</Section>
+)}
+
+<Section as="footer" sectionClass="py-4 bg-base-200 text-base-content border-t border-t-base-300" class="footer">
+	<aside class="items-center grid-flow-col">
+		<p>A vyke project, <br />by Jose Albizures</p>
+	</aside>
+	<nav class="md:place-self-center md:justify-self-end">
+		<div class="grid grid-flow-col gap-4">
+			<a href="https://twitter.com/albzrs">
+				<span class="sr-only">twitter link</span>
+				<slot name="twitter-icon">twitter</slot>
+			</a>
+			<a href="https://github.com/albizures">
+				<span class="sr-only">github link</span>
+				<slot name="github-icon">github</slot>
+			</a>
+		</div>
+	</nav>
 </Section>

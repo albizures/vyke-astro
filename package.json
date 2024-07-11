@@ -2,7 +2,6 @@
 	"name": "@vyke/astro",
 	"type": "module",
 	"version": "0.0.9",
-	"packageManager": "pnpm@8.11.0",
 	"description": "Sets of components and helpers for vyke apps made with astro",
 	"author": "Jose Albizures <jose@albizures.com> (https://albizures.com/)",
 	"license": "MIT",
@@ -20,6 +19,11 @@
 	"scripts": {
 		"dev": "astro dev --root playground",
 		"preview": "astro preview --root playground",
+		"test": "run-s test:types test:lint test:astro",
+		"test:use": "knip",
+		"test:lint": "eslint .",
+		"test:types": "tsc --noEmit",
+		"test:astro": "astro check --root playground",
 		"astro": "astro --root playground",
 		"release:bump": "standard-version -t v",
 		"release:publish": "pnpm publish --access public",
@@ -31,16 +35,21 @@
 		"@vyke/results": "^0.1.0"
 	},
 	"devDependencies": {
-		"@antfu/eslint-config": "^2.6.4",
+		"@antfu/eslint-config": "^2.22.0",
+		"@astrojs/check": "^0.8.1",
 		"@astrojs/tailwind": "^5.1.0",
-		"@vyke/dom": "^0.0.10",
-		"@vyke/results": "^0.1.0",
-		"astro": "^4.3.5",
-		"daisyui": "^4.6.2",
-		"eslint": "^8.56.0",
+		"@eslint/eslintrc": "^3.1.0",
+		"@vyke/dom": "^0.1.*",
+		"@vyke/results": "^0.4.3",
+		"astro": "^4.11.5",
+		"astro-eslint-parser": "^1.0.2",
+		"daisyui": "^4.12.10",
+		"eslint": "^9.6.0",
+		"eslint-plugin-astro": "^1.2.3",
+		"eslint-plugin-jsx-a11y": "^6.9.0",
 		"npm-run-all": "^4.1.5",
 		"standard-version": "^9.5.0",
-		"tailwindcss": "^3.4.1",
-		"typescript": "^5.3.3"
+		"tailwindcss": "^3.4.4",
+		"typescript": "^5.5.3"
 	}
 }

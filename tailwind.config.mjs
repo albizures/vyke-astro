@@ -2,7 +2,6 @@
 export default {
 	content: ['./**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	safelist: ['animate-shake'],
-	// eslint-disable-next-line ts/no-require-imports
 	plugins: [require('daisyui')],
 	daisyui: {
 		themes: [

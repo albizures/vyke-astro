@@ -1,15 +1,15 @@
 ---
 export type Props = {
-  class?: string;
-  sectionClass?: string;
-  as?: "div" | "section" | "header";
-};
+	class?: string
+	sectionClass?: string
+	as?: 'div' | 'section' | 'header'
+}
 
-const { class: className, as: Tag = "section", sectionClass } = Astro.props;
+const { class: className, as: Tag = 'section', sectionClass } = Astro.props;
 ---
 
-<div class:list={["px-6", sectionClass]}>
-  <Tag class:list={["max-w-3xl mx-auto", className]}>
-    <slot />
-  </Tag>
+<div class:list={['px-6', sectionClass]}>
+	<Tag class:list={['max-w-3xl mx-auto', className]}>
+		<slot />
+	</Tag>
 </div>
