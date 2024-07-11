@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/albizures/vyke-astro/compare/v0.0.9...v0.1.0) (2024-07-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* new footer with links component
+
+### Features
+
+* improve handle prefer color scheme ([bde3a00](https://github.com/albizures/vyke-astro/commit/bde3a00ad29aa5f4771cb5f67fe727bc10850b66))
+* new footer with links component ([568c2c2](https://github.com/albizures/vyke-astro/commit/568c2c2dd429362bb132027f96ad0b7a995882b5))
+
 ### [0.0.9](https://github.com/albizures/vyke-astro/compare/v0.0.8...v0.0.9) (2024-02-09)
 
 
