@@ -10,11 +10,12 @@
 </label>
 <script>
 import { on, query, select } from '@vyke/dom'
-import { unwrap } from '@vyke/results/result'
 
-const [checkbox] = unwrap(
-	select(query < HTMLInputElement > ('[data-theme-toggle]')),
-)
+const [checkbox] = select(query<HTMLInputElement>('[data-theme-toggle]'))
+
+if (!checkbox) {
+	throw new Error('Missing checkbox element')
+}
 
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 

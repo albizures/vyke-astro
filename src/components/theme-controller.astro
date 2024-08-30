@@ -42,11 +42,8 @@ const { themes } = Astro.props;
 
 <script>
 import { queryAll, select } from '@vyke/dom'
-import { unwrap } from '@vyke/results/result'
 
-const [radios] = unwrap(
-	select(queryAll < HTMLInputElement > ('.theme-controller')),
-)
+const [radios] = select(queryAll<HTMLInputElement>('.theme-controller'))
 
 for (const radio of radios) {
 	radio.onclick = () => {
