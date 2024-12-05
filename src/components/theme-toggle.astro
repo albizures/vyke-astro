@@ -1,3 +1,12 @@
+---
+export type Props = {
+	dark?: string
+	light?: string
+}
+
+const { dark = 'dark', light = 'cupcake' } = Astro.props;
+
+---
 <label class="swap swap-rotate btn btn-circle">
 	<input type="checkbox" data-theme-toggle value="dark" />
 
@@ -8,10 +17,11 @@
 		<slot name="dark" />
 	</div>
 </label>
-<script>
+
+<script is:inline define:vars={{ dark, light }}>
 import { on, query, select } from '@vyke/dom'
 
-const [checkbox] = select(query<HTMLInputElement>('[data-theme-toggle]'))
+const [checkbox] = select(query('[data-theme-toggle]'))
 
 if (!checkbox) {
 	throw new Error('Missing checkbox element')
@@ -19,7 +29,7 @@ if (!checkbox) {
 
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
-let changeOff: () => void
+let changeOff
 if (localStorage.getItem('v:theme') === null) {
 	checkbox.checked = mediaQuery.matches
 
@@ -28,8 +38,8 @@ if (localStorage.getItem('v:theme') === null) {
 	})
 }
 
-function getTheme(isDark: boolean) {
-	return isDark ? 'dark' : 'cupcake'
+function getTheme(isDark) {
+	return isDark ? dark : light
 }
 
 on(checkbox, 'change', () => {
