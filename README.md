@@ -7,6 +7,32 @@
 Sets of components and helpers for vyke apps made with astro
 
 ## Components
+### Theme
+```astro
+---
+import { Theme } from '@vyke/astro';
+---
+<html lang="en">
+	<head>
+		<Theme />
+	</head>
+	<body>
+		<!-- Your content here -->
+	</body>
+</html>
+```
+
+### ThemeToggle
+```astro
+---
+import { ThemeToggle } from '@vyke/astro';
+---
+
+<ThemeToggle slot="right">
+	<span slot="light">Light</span>
+	<span slot="dark">Dark</span>
+</ThemeToggle>
+```
 
 ### Footer
 
