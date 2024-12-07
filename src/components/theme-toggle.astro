@@ -19,12 +19,10 @@ const { dark = 'dark', light = 'cupcake' } = Astro.props;
 </label>
 
 <script is:inline define:vars={{ dark, light }}>
-import { on, query, select } from '@vyke/dom'
+const checkbox = document.querySelector('[data-theme-toggle]')
 
-const [checkbox] = select(query('[data-theme-toggle]'))
-
-if (!checkbox) {
-	throw new Error('Missing checkbox element')
+if (!(checkbox instanceof HTMLInputElement)) {
+	throw new TypeError('Missing checkbox element')
 }
 
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -33,16 +31,19 @@ let changeOff
 if (localStorage.getItem('v:theme') === null) {
 	checkbox.checked = mediaQuery.matches
 
-	changeOff = on(mediaQuery, 'change', (event) => {
+	function onChange(event) {
 		document.documentElement.dataset.theme = getTheme(event.matches)
-	})
+	}
+
+	mediaQuery.addEventListener('change', onChange)
+	changeOff = () => mediaQuery.removeEventListener('change', onChange)
 }
 
 function getTheme(isDark) {
 	return isDark ? dark : light
 }
 
-on(checkbox, 'change', () => {
+checkbox.addEventListener('change', () => {
 	if (changeOff) {
 		changeOff()
 	}
