@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/albizures/vyke-astro/compare/v0.1.5...v0.1.6) (2024-12-07)
+
+
+### Bug Fixes
+
+* theme toggle inline script ([cfa0838](https://github.com/albizures/vyke-astro/commit/cfa08381211a796083d6964a08f887c79a2be093))
+
 ### [0.1.5](https://github.com/albizures/vyke-astro/compare/v0.1.4...v0.1.5) (2024-12-05)
 
 
