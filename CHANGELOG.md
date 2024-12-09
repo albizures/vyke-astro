@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/albizures/vyke-astro/compare/v0.1.6...v0.1.7) (2024-12-09)
+
+
+### Features
+
+* add header options ([668c3bd](https://github.com/albizures/vyke-astro/commit/668c3bd96ac3465172c76f19fe60a568cb2401b6))
+
 ### [0.1.6](https://github.com/albizures/vyke-astro/compare/v0.1.5...v0.1.6) (2024-12-07)
 
 

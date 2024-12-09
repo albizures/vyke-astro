@@ -1,7 +1,7 @@
 {
 	"name": "@vyke/astro",
 	"type": "module",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"description": "Sets of components and helpers for vyke apps made with astro",
 	"author": "Jose Albizures <jose@albizures.com> (https://albizures.com/)",
 	"license": "MIT",
