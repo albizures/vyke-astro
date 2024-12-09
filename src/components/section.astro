@@ -3,13 +3,18 @@ export type Props = {
 	class?: string
 	sectionClass?: string
 	as?: 'div' | 'section' | 'header'
+	fullWidth?: boolean
 }
 
-const { class: className, as: Tag = 'section', sectionClass } = Astro.props;
+const { class: className, as: Tag = 'section', sectionClass, fullWidth = false } = Astro.props;
 ---
 
 <div class:list={['px-6', sectionClass]}>
-	<Tag class:list={['max-w-3xl mx-auto', className]}>
+	<Tag
+		class:list={['mx-auto', className, {
+			'max-w-3xl': !fullWidth,
+		}]}
+	>
 		<slot />
 	</Tag>
 </div>

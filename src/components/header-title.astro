@@ -1,0 +1,21 @@
+---
+export type Props = {
+	title?: string
+	enableTitlePrefix?: boolean
+}
+
+const { title, enableTitlePrefix = true } = Astro.props;
+---
+
+<a href="/" class="btn border-0 text-xl text-0">
+	{
+		title && enableTitlePrefix && (
+			<span class="text-primary">
+					vyke/<span class="text-base-content">{title}</span>
+			</span>
+		)
+	}
+	{title && !enableTitlePrefix && <span class="text-base-content">{title}</span>}
+	{!title && <span>vyke</span>}
+
+</a>
